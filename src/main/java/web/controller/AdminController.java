@@ -29,7 +29,7 @@ public class AdminController {
         return "admin";
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") int id) {
         userService.delete(id);
         return "redirect:/admin";
@@ -37,7 +37,7 @@ public class AdminController {
 
     @GetMapping("/edit/{id}")
     public String editUser(Model model, @PathVariable("id") int id) {
-        model.addAttribute("user", userService.getUser(id));
+        model.addAttribute("user", userService.getUserById(id));
         return "editUser";
     }
 

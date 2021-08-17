@@ -31,10 +31,4 @@ public class RoleServiceImpl implements RoleService{
     public List<Role> getRoles() {
         return roledao.getRoles();
     }
-
-    @Override
-    @Transactional
-    public Role getRoleById(int id) {
-        return roledao.getRoleById(id);
-    }
 }

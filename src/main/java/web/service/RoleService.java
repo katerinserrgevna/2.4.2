@@ -9,5 +9,4 @@ public interface RoleService {
     Role getRoleByName(String userName);
     void saveRole(Role role);
     List<Role> getRoles();
-    public Role getRoleById(int id);
 }
